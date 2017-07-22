@@ -57,6 +57,21 @@ RCT_EXPORT_METHOD(addBox:(NSDictionary *)object resolve:(RCTPromiseResolveBlock)
     [[RCTARKit sharedInstance] addBox:property];
 }
 
+
+RCT_EXPORT_METHOD(addText:(NSDictionary *)object resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject) {
+    TextProperty property;
+    property.x = [object[@"x"] floatValue];
+    property.y = [object[@"y"] floatValue];
+    property.z = [object[@"z"] floatValue];
+    property.extrusionDepth = [object[@"extrusionDepth"] floatValue];
+    property.text = [object[@"text"] description];
+    
+    
+    [[RCTARKit sharedInstance] addText:property];
+}
+
+
+
 RCT_EXPORT_METHOD(addSphere:(NSDictionary *)object resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject) {
     SphereProperty property;
     property.x = [object[@"x"] floatValue];

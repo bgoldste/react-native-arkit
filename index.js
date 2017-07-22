@@ -26,6 +26,7 @@ class ARKit extends React.Component {
   resume = ARKitManager.resume;
 
   addBox = ARKitManager.addBox;
+  addText = ARKitManager.addText;
   addSphere = ARKitManager.addSphere;
   addCylinder = ARKitManager.addCylinder;
   addCone = ARKitManager.addCone;
@@ -34,6 +35,7 @@ class ARKit extends React.Component {
   addTorus = ARKitManager.addTorus;
   addCapsule = ARKitManager.addCapsule;
   addPlane = ARKitManager.addPlane;
+ 
 
   callback(name) {
     return event => {

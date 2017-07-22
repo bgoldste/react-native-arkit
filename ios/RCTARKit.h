@@ -13,6 +13,9 @@
 #import <React/RCTComponent.h>
 #import <React/RCTBridgeModule.h>
 
+
+
+
 typedef struct {
     float x;
     float y;
@@ -89,6 +92,18 @@ typedef struct {
     float height;
 } PlaneProperty;
 
+typedef struct {
+    float x;
+    float y;
+    float z;
+    // float width;
+    // float height;
+    // float length;
+    float extrusionDepth;
+     __unsafe_unretained NSString *text;
+    
+} TextProperty;
+
 @interface RCTARKit : ARSCNView
 
 + (instancetype)sharedInstance;
@@ -117,5 +132,6 @@ typedef struct {
 - (void)addTorus:(TorusProperty)property;
 - (void)addCapsule:(CapsuleProperty)property;
 - (void)addPlane:(PlaneProperty)property;
+- (void)addText:(TextProperty)property;
 
 @end

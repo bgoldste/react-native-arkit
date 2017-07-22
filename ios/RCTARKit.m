@@ -140,6 +140,16 @@
     [self.scene.rootNode addChildNode:node];
 }
 
+
+
+- (void)addText:(TextProperty)property {
+    SCNText *sceneText = [SCNText textWithString:property.text extrusionDepth:property.extrusionDepth];
+    SCNNode *node = [SCNNode nodeWithGeometry:sceneText];
+    node.position = SCNVector3Make(property.x, property.y, property.z);
+    [self.scene.rootNode addChildNode:node];
+}
+
+
 - (void)addSphere:(SphereProperty)property {
     SCNSphere *geometry = [SCNSphere sphereWithRadius:property.radius];
     SCNNode *node = [SCNNode nodeWithGeometry:geometry];
